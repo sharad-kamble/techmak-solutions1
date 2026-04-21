@@ -1,0 +1,359 @@
+/* ================= GLOBAL RESET ================= */
+/* ================= GLOBAL RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* ================= IMAGE FIX ================= */
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Fix Bootstrap row overflow */
+/* .row {
+    margin-left: 0;
+    margin-right: 0;
+} */
+.hero-bg {
+    position: relative;
+    background: url("images/hero-bg.png") center/cover no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+/* LEFT SIDE OVERLAY */
+.hero-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    /* left dark gradient */
+    background: linear-gradient(to right,
+            rgba(0, 0, 0, 0.75) 0%,
+            rgba(0, 0, 0, 0.6) 35%,
+            rgba(0, 0, 0, 0.3) 60%,
+            rgba(0, 0, 0, 0) 100%);
+}
+
+/* keep content above overlay */
+.hero-bg .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* ================= TOP HEADER ================= */
+
+#topHeader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030;
+    background: #000;
+    padding: 0 1rem;
+}
+
+#topHeader a {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+}
+
+/* ================= NAVBAR TOGGLER ================= */
+
+.navbar-toggler {
+    border: none;
+    color: #fff;
+    box-shadow: none !important;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* ================= BOTTOM NAVBAR ================= */
+
+#bottomHeader {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    z-index: 1029;
+    background: linear-gradient(90deg, #0B5ED7 0%, #C81E1E 100%);
+}
+
+#bottomHeader .nav-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 14px;
+    font-weight: 500;
+    color: #fff;
+    transition: 0.3s;
+}
+
+#bottomHeader .nav-link.active {
+    color: #FFE082 !important;
+}
+
+#bottomHeader .dropdown-menu {
+    border: none;
+    border-radius: 12px;
+    margin-top: 0.75rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+#bottomHeader .dropdown-item {
+    color: #000;
+    padding: 8px 14px;
+    font-weight: 500;
+}
+
+/* Desktop hover dropdown */
+
+@media(min-width:992px) {
+
+    .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+}
+
+/* ================= MOBILE NAVBAR ================= */
+
+@media(max-width:768px) {
+
+    #bottomHeader {
+        top: 56px;
+    }
+
+    .navbar-nav {
+        background: linear-gradient(180deg, #0B5ED7, #C81E1E);
+        border-radius: 12px;
+        padding: 12px;
+    }
+
+}
+
+/* ================= HERO SECTION ================= */
+
+.hero-bg {
+    position: relative;
+    background-image: url("images/hero-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+/* overlay */
+
+.hero-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* keep hero content above overlay */
+
+.hero-bg .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Tablet */
+
+@media(max-width:992px) {
+
+    .hero-bg {
+        min-height: 90vh;
+        padding: 120px 20px 80px;
+    }
+
+}
+
+/* Mobile */
+
+@media(max-width:768px) {
+
+    .hero-bg {
+        min-height: auto;
+        padding: 140px 20px 80px;
+        background-size: cover;
+        background-position: center;
+    }
+
+}
+
+/* Small Mobile */
+
+@media(max-width:480px) {
+
+    .hero-bg {
+        padding: 150px 15px 60px;
+    }
+
+}
+
+/* ================= HERO CONTENT ================= */
+
+section.py-5 {
+    padding-top: 100px;
+    padding-bottom: 80px;
+}
+
+section.py-5 h1 {
+    font-weight: 900;
+    font-size: 3rem;
+}
+
+section.py-5 p {
+    font-size: 1.05rem;
+    color: #333;
+}
+
+/* ================= BUTTONS ================= */
+
+.btn-danger {
+    background: #dc3545;
+    border: none;
+    padding: 10px 22px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.btn-danger:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(220, 53, 69, 0.4);
+}
+
+.btn-outline-primary {
+    color: #0284C7;
+    border: 2px solid #0284C7;
+    padding: 10px 22px;
+    font-weight: 600;
+    border-radius: 8px;
+}
+
+.btn-outline-primary:hover {
+    background: #0284C7;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(2, 132, 199, 0.3);
+}
+
+/* ================= GALLERY ================= */
+
+.gallery-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.4s;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+.gallery-card img {
+    width: 100%;
+    transition: 0.4s;
+}
+
+.gallery-card:hover img {
+    transform: scale(1.08);
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(3, 87, 142, 0.8);
+    color: #fff;
+    padding: 12px 15px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.3s;
+}
+
+.gallery-card:hover .gallery-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.gallery-overlay h6 {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+/* ================= CORE CARDS ================= */
+
+.core-card {
+    transition: 0.3s;
+    border-radius: 16px;
+}
+
+.core-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* ================= ICON ================= */
+
+.icon {
+    width: 45px;
+    height: 45px;
+    font-size: 1.1rem;
+}
+
+/* ================= CHOOSE CARD ================= */
+
+.choose-card {
+    transition: 0.3s;
+}
+
+.choose-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* ================= SMALL DEVICE FIX ================= */
+
+@media(max-width:767px) {
+
+    .icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+}

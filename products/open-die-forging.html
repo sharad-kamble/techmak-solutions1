@@ -1,0 +1,731 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tech Mak Solutions – High-Strength Forged & Machined Components with World-Class Quality</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.png">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        /* Section background */
+        section {
+            background: linear-gradient(180deg, #f8fafc, #eef2f7);
+        }
+
+        /* Heading */
+        section h3 {
+            font-size: 36px;
+            margin-bottom: 40px;
+            letter-spacing: 1px;
+            position: relative;
+            font-family: "Plus Jakarta Sans", sans-serif;
+        }
+
+        section h3::after {
+            content: "";
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #0284C7, #0ea5e9);
+            display: block;
+            margin: 12px auto 0;
+            border-radius: 20px;
+        }
+
+        /* Premium Card */
+        .card {
+            border: none;
+            border-radius: 18px;
+            overflow: hidden;
+            background: #fff;
+            box-shadow:
+                0 10px 25px rgba(0, 0, 0, 0.08),
+                0 4px 10px rgba(0, 0, 0, 0.05);
+            transition: all .4s ease;
+            position: relative;
+            font-family: "Plus Jakarta Sans", sans-serif;
+        }
+
+        /* Gradient glow border */
+        .card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            padding: 1px;
+            border-radius: 18px;
+            background: linear-gradient(120deg, #0284C7, #38bdf8, #0284C7);
+            -webkit-mask:
+                linear-gradient(#fff 0 0) content-box,
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0;
+            transition: .4s;
+        }
+
+        /* Card hover */
+        .card:hover {
+            transform: translateY(-12px);
+            box-shadow:
+                0 25px 50px rgba(0, 0, 0, 0.15),
+                0 10px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .card:hover::before {
+            opacity: 1;
+        }
+
+        /* Image styling */
+        .card-img-top {
+            height: 210px;
+            object-fit: cover;
+            transition: transform .5s ease;
+        }
+
+        /* Image zoom */
+        .card:hover .card-img-top {
+            transform: scale(1.08);
+        }
+
+        /* Card body */
+        .card-body {
+            padding: 24px;
+        }
+
+        .card-title {
+            font-weight: 700;
+            font-size: 19px;
+            margin-bottom: 10px;
+            color: #0f172a;
+        }
+
+        .card-text {
+            font-size: 14.5px;
+            line-height: 1.7;
+            color: #64748b;
+        }
+
+        /* Mobile */
+        @media(max-width:768px) {
+
+            .card-img-top {
+                height: 180px;
+            }
+
+            section h3 {
+                font-size: 28px;
+            }
+
+        }
+
+
+        .breadcrumb {
+            font-size: 20px;
+        }
+
+        .breadcrumb a {
+            color: #6c757d;
+            transition: 0.3s;
+        }
+
+        .breadcrumb a:hover {
+            color: #0284C7;
+        }
+
+        .dropdown-menu {
+            min-width: 250px;
+        }
+
+
+
+        /* Allow wrapping on small screens */
+        .breadcrumb {
+            flex-wrap: wrap;
+            row-gap: 4px;
+        }
+
+        /* Better spacing on mobile */
+        @media (max-width: 576px) {
+            .breadcrumb {
+                font-size: 16px;
+                padding: 8px 10px;
+            }
+
+            .breadcrumb-item {
+                max-width: 100%;
+            }
+        }
+
+        /* Dropdown full width on mobile */
+        @media (max-width: 576px) {
+            .dropdown-menu {
+                width: 100%;
+            }
+        }
+
+        /* Prevent overflow issues */
+        .breadcrumb-item a {
+            white-space: nowrap;
+        }
+
+        /* Smooth hover */
+        .breadcrumb a:hover {
+            color: #0284C7;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ================= TOP HEADER ================= -->
+    <header id="topHeader" class="bg-black fixed-top">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../images/logo.png" alt="Logo" width="150" height="40">
+                </a>
+
+                <button id="navbarToggler" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#topNav" aria-controls="topNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-end" id="topNav">
+                    <div class="navbar-nav text-center text-lg-start gap-2 gap-lg-3">
+                        <a href="mailto:info@apexitsolution.in" class="nav-link text-white">
+                            <i class="fa-solid fa-envelope"></i> sales@techmaksolutions.com
+                        </a>
+                        <!-- <a href="mailto:hr@apexitsolution.in" class="nav-link text-white">
+                            <i class="fa-solid fa-envelope"></i> hr@teckmaksolution.com
+                        </a> -->
+                        <a href="tel:+918956889634" class="nav-link text-white">
+                            <i class="fa-solid fa-phone"></i> +91 90150 87266
+                        </a>
+                        <!-- <a href="tel:+918010410293" class="nav-link text-white">
+                            <i class="fa-solid fa-phone"></i> +91 XXXXX XXXXX
+                        </a> -->
+                        <a href="../contact.html" class="btn btn-danger">
+                            <i class="fa-solid fa-phone"></i> Contact Us
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Spacer for fixed header -->
+    <div style="height:70px"></div>
+
+    <!-- ================= BOTTOM NAVBAR ================= -->
+    <header id="bottomHeader" class="bg-white shadow-sm">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <!-- Mobile Toggle Button -->
+                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navbar Links -->
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav gap-2 gap-lg-3">
+
+                        <!-- Home -->
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="../index.html">
+                                <i class="fa-solid fa-house"></i> Home
+                            </a>
+                        </li>
+
+                        <!-- About Us -->
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="../about-us.html">
+                                <i class="fa-solid fa-info-circle"></i> About Us
+                            </a>
+                        </li>
+
+                        <!-- Products (Dropdown) -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="products.html" id="productsDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-solid fa-boxes-stacked"></i> Products
+                            </a>
+
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="../products/closed-die-forging.html">
+                                        Closed Die Forging
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="../products/open-die-forging.html">
+                                        Open Die Forging
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="../products/ring-rolling.html">
+                                        Ring Rolling Components
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="../products/machined-components.html">
+                                        Machined Components
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="../products/oil-gas-sector-components.html">
+                                        Oil & Gas Sector Components
+                                    </a>
+                                </li>
+
+                                <!-- <li>
+                                    <a class="dropdown-item" href="../products/material-grades.html">
+                                        Material Grades
+                                    </a>
+                                </li> -->
+                            </ul>
+                        </li>
+
+
+                        <!-- capabilities -->
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="../capabilities.html">
+                                <i class="fa-solid fa-cogs"></i> Capabilities
+                            </a>
+                        </li>
+                        <!-- Quality -->
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="../quality.html">
+                                <i class="fa-solid fa-magnifying-glass-chart"></i> Quality
+                            </a>
+                        </li>
+
+
+
+                        <!-- Industries -->
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="../industries.html">
+                                <i class="fa-solid fa-industry"></i> Industries
+                            </a>
+                        </li>
+
+                        <!-- Contact / Get In Touch -->
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="../contact.html">
+                                <i class="fa-solid fa-envelope"></i> Get In Touch
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb  px-3 py-2 rounded align-items-center">
+            <li class="breadcrumb-item">
+                <a href="../index.html" class="text-decoration-none fw-medium">
+                    <i class="bi bi-house-door me-1"></i>Home
+                </a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="#" class="text-decoration-none fw-medium">
+                    Products
+                </a>
+            </li>
+            <li class="breadcrumb-item active fw-semibold" aria-current="page">
+                Open Die Forgings
+            </li>
+        </ol>
+    </nav>
+
+    <nav aria-label="breadcrumb" class="w-100">
+        <ol class="breadcrumb bg-white px-3 py-2 rounded shadow-sm mb-0 flex-wrap">
+
+            <li class="breadcrumb-item">
+                <a href="#" class="text-decoration-none small">Home</a>
+            </li>
+
+            <li class="breadcrumb-item">
+                <a href="#" class="text-decoration-none small">Products</a>
+            </li>
+
+            <!-- Dropdown -->
+            <li class="breadcrumb-item dropdown">
+                <a class="dropdown-toggle text-decoration-none small" href="#" role="button" data-bs-toggle="dropdown">
+                    Forging & Components
+                </a>
+
+                <ul class="dropdown-menu shadow border-0 rounded-3 p-2">
+                    <li><a class="dropdown-item" href="./closed-die-forging.html">Closed Die Forging</a></li>
+                    <li><a class="dropdown-item" href="./open-die-forging.html">Open Die Forging</a></li>
+                    <li><a class="dropdown-item" href="./ring-rolling.html">Ring Rolling Components</a></li>
+                    <li><a class="dropdown-item" href="./machined-components.html">Machined Components</a></li>
+                    <!-- <li><a class="dropdown-item" href="./oil-gas-sector-components.html">Oil & Gas Sector Components</a> -->
+            </li>
+            </ul>
+            </li>
+
+            <li class="breadcrumb-item active fw-semibold text-dark small" aria-current="page">
+                Open Die Forging
+            </li>
+
+        </ol>
+    </nav>
+    <section class="py-5">
+
+        <h3 class="fw-bold text-center">Open Die Forgings</h3>
+
+        <div class="container mt-4">
+            <div class="row g-4">
+
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card h-100 shadow-sm">
+
+                        <img src="../images/product-open-dia-forging.png" class="card-img-top"
+                            style="height:200px; object-fit:cover;" alt="Open Die Forging">
+
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Open Die Forging</h5>
+
+                            <p class="card-text flex-grow-1">
+                                Open die forging is a process where heated metal is shaped using repeated
+                                hammering or pressing between flat or simple dies to produce large,
+                                high-strength components.
+                            </p>
+                        </div>
+
+                        <!-- Bottom Info Section -->
+                        <div class="card-footer bg-primary text-white text-center py-3">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <small>Production Capacity</small><br>
+                                    <strong>300 MT / Month</strong>
+                                </div>
+                                <div>
+                                    <small>Weight Range</small><br>
+                                    <strong>10 kg – 2000 kg</strong>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Round Bars -->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card h-60">
+                        <img src="../images/ODF/Forged-Bars.jpeg" class="card-img-top">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Forged Bars and Flat</h5>
+                            <!-- <p class="card-text flex-grow-1">
+                                High-strength forged round bars offering excellent toughness,
+                                dimensional accuracy, and durability for heavy-duty industrial applications.
+                            </p> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Forged Block -->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card h-60">
+                        <img src="../images/ODF/Forged-Block.jpeg" class="card-img-top">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Forged Block</h5>
+                            <!-- <p class="card-text flex-grow-1">
+                                Solid forged blocks engineered for superior strength,
+                                uniform grain flow, and high load-bearing performance.
+                            </p> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Shafts -->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card h-60">
+                        <img src="../images/ODF/shafts-step-shafts.jpeg" class="card-img-top">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Shafts / Step Shafts</h5>
+                            <!-- <p class="card-text flex-grow-1">
+                                Precision-forged shafts delivering smooth power transmission,
+                                high fatigue resistance, and long service life.
+                            </p> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Discs -->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card h-60">
+                        <img src="../images/ODF/Discs.jpeg" class="card-img-top">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Discs / Blanks</h5>
+                            <!-- <p class="card-text flex-grow-1">
+                                High-performance forged discs offering excellent strength,
+                                uniform structure, and pressure resistance.
+                            </p> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bushings -->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card h-60">
+                        <img src="../images/ODF/Bushings.jpeg" class="card-img-top">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Bushings</h5>
+                            <!-- <p class="card-text flex-grow-1">
+                                Forged bushings providing superior wear resistance,
+                                smooth motion, and extended operational life.
+                            </p> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hollow Forgings -->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card h-60">
+                        <img src="../images/ODF/Hollow-Forgings.jpeg" class="card-img-top">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Hollow Forgings</h5>
+                            <!-- <p class="card-text flex-grow-1">
+                                Lightweight yet strong hollow forgings designed
+                                for high pressure, efficiency, and durability.
+                            </p> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Forged Bars -->
+                <!-- <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card h-100">
+                        <img src="../images/ODF/Forged-Bars.jpeg" class="card-img-top">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Forged Bars</h5>
+                            <p class="card-text flex-grow-1">
+                                Premium forged bars ensuring superior mechanical properties
+                                and consistent industrial quality.
+                            </p>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- Heavy Round Bar -->
+                <!-- <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card h-100">
+                        <img src="../images/ODF/Large-Heavy-Round-Bar.jpeg" class="card-img-top">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Large Heavy Round Bar</h5>
+                            <p class="card-text flex-grow-1">
+                                Open-die forged heavy round bars built for extreme strength
+                                and large-scale industrial use.
+                            </p>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- Open Die Forging -->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card h-60">
+                        <img src="../images/ODF/Open-Die-Forgings.jpeg" class="card-img-top">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Open Die Forgings</h5>
+                            <!-- <p class="card-text flex-grow-1">
+                                Custom open-die forgings offering superior grain flow
+                                and structural integrity.
+                            </p> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stems -->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card h-60">
+                        <img src="../images/ODF/Stems.jpeg" class="card-img-top">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Stems</h5>
+                            <!-- <p class="card-text flex-grow-1">
+                                Precision-forged stems ensuring strength,
+                                accuracy, and reliable mechanical operation.
+                            </p> -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-black text-light pt-5">
+        <div class="container">
+
+            <div class="row">
+
+                <!-- About Company -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="../images/logo.png" alt="TechMak Solutions Logo" style="width:150px;height:auto;"
+                            class="me-2">
+                        <!-- <h5 class="fw-bold text-white mb-0">
+                            TechMak Solutions
+                        </h5> -->
+                    </div>
+
+
+                    <p class="text-white">
+                        Delivering high-strength forged & machined components with
+                        world-class quality and reliability serving Oil & Gas,
+                        Heavy Engineering and global industrial sectors.
+                    </p>
+                </div>
+
+
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="fw-bold text-white mb-3">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="../index.html" class="text-light text-decoration-none">Home</a></li>
+                        <li><a href="../about-us.html" class="text-light text-decoration-none">About Us</a></li>
+                        <li><a href="../products/closed-die-forging.html"
+                                class="text-light text-decoration-none">Products</a></li>
+                        <li><a href="../quality.html" class="text-light text-decoration-none">Services</a></li>
+                        <li><a href="../contact.html" class="text-light text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <!-- Contact Info -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h6 class="fw-bold text-white mb-3">Contact Info</h6>
+
+                    <p class="mb-2">
+                        <i class="fa-solid fa-location-dot me-2"></i>
+                        <strong>Office:</strong><br>
+                        A-729, Brahma Business Park,<br>
+                        New Kalyani Nagar,<br>
+                        Pune – 411014, Maharashtra
+                    </p>
+
+                    <p class="mb-2">
+                        <i class="fa-solid fa-industry me-2"></i>
+                        <strong>Plant:</strong><br>
+                        Gat No. 1297, Sane Chowk, Chikhali,<br>
+                        Pune – 411062, Maharashtra, India
+                    </p>
+                    <p class="mb-2">
+                        <i class="fa-solid fa-envelope me-2"></i>
+                        sales@techmaksolutions.com
+                    </p>
+
+                    <p class="mb-0">
+                        <i class="fa-solid fa-clock me-2"></i>
+                        Mon – Sat : 9:00 AM – 7:00 PM
+                    </p>
+                </div>
+                <!-- Why TechMak Solutions -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h6 class="fw-bold text-white mb-3">Why TechMak Solutions</h6>
+
+                    <ul class="list-unstyled text-light">
+
+                        <li class="mb-2">
+                            <i class="fa-solid fa-circle-check text-warning me-2"></i>
+                            Precision Forged Components
+                        </li>
+
+                        <li class="mb-2">
+                            <i class="fa-solid fa-circle-check text-warning me-2"></i>
+                            Advanced Ring Rolling Technology
+                        </li>
+
+                        <li class="mb-2">
+                            <i class="fa-solid fa-circle-check text-warning me-2"></i>
+                            Quality & Reliability Assurance
+                        </li>
+
+                        <li class="mb-2">
+                            <i class="fa-solid fa-circle-check text-warning me-2"></i>
+                            Domestic & Global Supply
+                        </li>
+
+                        <li class="mb-0">
+                            <i class="fa-solid fa-circle-check text-warning me-2"></i>
+                            Industrial Engineering Expertise
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+
+            <hr class="border-light">
+
+            <!-- Footer Bottom -->
+            <div class="row">
+                <div class="col-12 text-center py-3">
+                    © 2026 TechMak Solutions. All Rights Reserved.
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <!-- ================= BOOTSTRAP JS ================= -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Toggle icon change -->
+    <script>
+        document.addEventListener('shown.bs.collapse', function (e) {
+            if (e.target.id === 'topNav') {
+                document.querySelector('#navbarToggler i')
+                    .classList.replace('fa-bars', 'fa-times');
+            }
+        });
+
+        document.addEventListener('hidden.bs.collapse', function (e) {
+            if (e.target.id === 'topNav') {
+                document.querySelector('#navbarToggler i')
+                    .classList.replace('fa-times', 'fa-bars');
+            }
+        });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 900, once: true });
+    </script>
+
+
+</body>
+
+</html>

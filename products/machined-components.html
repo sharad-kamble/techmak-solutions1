@@ -1,0 +1,912 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tech Mak Solutions – High-Strength Forged & Machined Components with World-Class Quality</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.png">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap CSS (Latest) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        /* Section background */
+        section {
+            background: linear-gradient(180deg, #f8fafc, #eef2f7);
+        }
+
+        /* Section Heading */
+        section h3 {
+            font-size: 36px;
+            margin-bottom: 40px;
+            letter-spacing: 1px;
+            position: relative;
+            font-family: "Plus Jakarta Sans", sans-serif;
+        }
+
+        section h3::after {
+            content: "";
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #0284C7, #0ea5e9);
+            display: block;
+            margin: 12px auto 0;
+            border-radius: 20px;
+        }
+
+        /* Premium Card */
+        .card {
+            border: none;
+            border-radius: 18px;
+            overflow: hidden;
+            background: #fff;
+            box-shadow:
+                0 10px 25px rgba(0, 0, 0, 0.08),
+                0 4px 10px rgba(0, 0, 0, 0.05);
+            transition: all .4s ease;
+            position: relative;
+            font-family: "Plus Jakarta Sans", sans-serif;
+        }
+
+        /* Gradient Glow Border */
+        .card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            padding: 1px;
+            border-radius: 18px;
+            background: linear-gradient(120deg, #0284C7, #38bdf8, #0284C7);
+            -webkit-mask:
+                linear-gradient(#fff 0 0) content-box,
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0;
+            transition: .4s;
+        }
+
+        /* Hover Lift */
+        .card:hover {
+            transform: translateY(-12px);
+            box-shadow:
+                0 25px 50px rgba(0, 0, 0, 0.15),
+                0 10px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .card:hover::before {
+            opacity: 1;
+        }
+
+        /* Image Style */
+        .card-img-top {
+            height: 210px;
+            object-fit: cover;
+            transition: transform .5s ease;
+        }
+
+        /* Image Zoom Effect */
+        .card:hover .card-img-top {
+            transform: scale(1.08);
+        }
+
+        /* Card Body */
+        .card-body {
+            padding: 24px;
+        }
+
+        .card-title {
+            font-weight: 700;
+            font-size: 19px;
+            margin-bottom: 10px;
+            color: #0f172a;
+        }
+
+        .card-text {
+            font-size: 14.5px;
+            line-height: 1.7;
+            color: #64748b;
+        }
+
+        /* Mobile */
+        @media(max-width:768px) {
+
+            .card-img-top {
+                height: 180px;
+            }
+
+            section h3 {
+                font-size: 28px;
+            }
+
+        }
+
+
+
+
+        /* .breadcrumb */
+
+        .breadcrumb {
+            font-size: 20px;
+        }
+
+        .breadcrumb a {
+            color: #6c757d;
+            transition: 0.3s;
+        }
+
+        .breadcrumb a:hover {
+            color: #0284C7;
+        }
+
+        .dropdown-menu {
+            min-width: 250px;
+        }
+
+
+
+        /* Allow wrapping on small screens */
+        .breadcrumb {
+            flex-wrap: wrap;
+            row-gap: 4px;
+        }
+
+        /* Better spacing on mobile */
+        @media (max-width: 576px) {
+            .breadcrumb {
+                font-size: 16px;
+                padding: 8px 10px;
+            }
+
+            .breadcrumb-item {
+                max-width: 100%;
+            }
+        }
+
+        /* Dropdown full width on mobile */
+        @media (max-width: 576px) {
+            .dropdown-menu {
+                width: 100%;
+            }
+        }
+
+        /* Prevent overflow issues */
+        .breadcrumb-item a {
+            white-space: nowrap;
+        }
+
+        /* Smooth hover */
+        .breadcrumb a:hover {
+            color: #0284C7;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ================= TOP HEADER ================= -->
+    <header id="topHeader" class="bg-black fixed-top">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../images/logo.png" alt="Logo" width="150" height="40">
+                </a>
+
+                <button id="navbarToggler" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#topNav" aria-controls="topNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-end" id="topNav">
+                    <div class="navbar-nav text-center text-lg-start gap-2 gap-lg-3">
+                        <a href="mailto:info@apexitsolution.in" class="nav-link text-white">
+                            <i class="fa-solid fa-envelope"></i> sales@techmaksolutions.com
+                        </a>
+                        <!-- <a href="mailto:hr@apexitsolution.in" class="nav-link text-white">
+                            <i class="fa-solid fa-envelope"></i> hr@teckmaksolution.com
+                        </a> -->
+                        <a href="tel:+918956889634" class="nav-link text-white">
+                            <i class="fa-solid fa-phone"></i> +91 90150 87266
+                        </a>
+                        <!-- <a href="tel:+918010410293" class="nav-link text-white">
+                            <i class="fa-solid fa-phone"></i> +91 XXXXX XXXXX
+                        </a> -->
+                        <a href="../contact.html" class="btn btn-danger">
+                            <i class="fa-solid fa-phone"></i> Contact Us
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Spacer for fixed header -->
+    <div style="height:70px"></div>
+
+    <!-- ================= BOTTOM NAVBAR ================= -->
+    <header id="bottomHeader" class="bg-white shadow-sm">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <!-- Mobile Toggle Button -->
+                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navbar Links -->
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav gap-2 gap-lg-3">
+
+                        <!-- Home -->
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="../index.html">
+                                <i class="fa-solid fa-house"></i> Home
+                            </a>
+                        </li>
+
+                        <!-- About Us -->
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="../about-us.html">
+                                <i class="fa-solid fa-info-circle"></i> About Us
+                            </a>
+                        </li>
+
+                        <!-- Products (Dropdown) -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="products.html" id="productsDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-solid fa-boxes-stacked"></i> Products
+                            </a>
+
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="../products/closed-die-forging.html">
+                                        Closed Die Forging
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="../products/open-die-forging.html">
+                                        Open Die Forging
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="../products/ring-rolling.html">
+                                        Ring Rolling Components
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="../products/machined-components.html">
+                                        Machined Components
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="../products/oil-gas-sector-components.html">
+                                        Oil & Gas Sector Components
+                                    </a>
+                                </li>
+                                <!-- 
+                                <li>
+                                    <a class="dropdown-item" href="../products/material-grades.html">
+                                        Material Grades
+                                    </a>
+                                </li> -->
+                            </ul>
+                        </li>
+
+
+                        <!-- capabilities -->
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="../capabilities.html">
+                                <i class="fa-solid fa-cogs"></i> Capabilities
+                            </a>
+                        </li>
+                        <!-- Quality -->
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="../quality.html">
+                                <i class="fa-solid fa-magnifying-glass-chart"></i> Quality
+                            </a>
+                        </li>
+
+
+
+                        <!-- Industries -->
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="../industries.html">
+                                <i class="fa-solid fa-industry"></i> Industries
+                            </a>
+                        </li>
+
+                        <!-- Contact / Get In Touch -->
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="../contact.html">
+                                <i class="fa-solid fa-envelope"></i> Get In Touch
+                            </a>
+                        </li>
+
+
+
+                    </ul>
+                </div>
+
+            </nav>
+        </div>
+    </header>
+
+
+
+
+    <!-- PRODUCTS HERO -->
+    <!-- <section class="py-5 bg-dark text-white text-center">
+        <div class="container">
+            <h1 class="fw-bold mb-3">Our Product Range</h1>
+            <p class="lead mb-0 text-white">
+                High-precision closed die forged components engineered for strength, accuracy, and durability.
+            </p>
+        </div>
+    </section> -->
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb px-3 py-2 rounded align-items-center">
+            <li class="breadcrumb-item">
+                <a href="../index.html" class="text-decoration-none fw-medium">
+                    <i class="bi bi-house-door me-1"></i>Home
+                </a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="#" class="text-decoration-none fw-medium">
+                    Products
+                </a>
+            </li>
+            <li class="breadcrumb-item active fw-semibold" aria-current="page">
+                Machined Components
+            </li>
+        </ol>
+    </nav>
+    <!-- ================= HERO ================= -->
+    <!-- <section class="py-5 bg-dark text-white text-center">
+        <div class="container">
+            <h1 class="fw-bold mb-3">CNC / VMC MACHINED COMPONENTS</h1> -->
+    <!-- <p class="lead text-white">
+                High-precision CNC & VMC machining delivering tight tolerances,
+                superior surface finish, and consistent quality.
+            </p> -->
+    <!-- </div>
+    </section> -->
+
+
+
+    <!-- breadcrumb -->
+    <nav aria-label="breadcrumb" class="w-100">
+        <ol class="breadcrumb bg-white px-3 py-2 rounded shadow-sm mb-0 flex-wrap">
+
+            <li class="breadcrumb-item">
+                <a href="#" class="text-decoration-none small">Home</a>
+            </li>
+
+            <li class="breadcrumb-item">
+                <a href="#" class="text-decoration-none small">Products</a>
+            </li>
+
+            <!-- Dropdown -->
+            <li class="breadcrumb-item dropdown">
+                <a class="dropdown-toggle text-decoration-none small" href="#" role="button" data-bs-toggle="dropdown">
+                    Forging & Components
+                </a>
+
+                <ul class="dropdown-menu shadow border-0 rounded-3 p-2">
+                    <li><a class="dropdown-item" href="./closed-die-forging.html">Closed Die Forging</a></li>
+                    <li><a class="dropdown-item" href="./open-die-forging.html">Open Die Forging</a></li>
+                    <li><a class="dropdown-item" href="./ring-rolling.html">Ring Rolling Components</a></li>
+                    <li><a class="dropdown-item" href="./machined-components.html">Machined Components</a></li>
+                    <!-- <li><a class="dropdown-item" href="./oil-gas-sector-components.html">Oil & Gas Sector Components</a> -->
+            </li>
+            </ul>
+            </li>
+
+            <li class="breadcrumb-item active fw-semibold text-dark small" aria-current="page">
+                Machine Components
+            </li>
+
+        </ol>
+    </nav>
+
+    <!-- ================= CONTENT ================= -->
+    <section class="py-5">
+        <div class="container">
+
+            <h3 class="fw-bold text-center"> Machined Components</h3>
+
+            <div class="container mt-4">
+                <div class="row g-4">
+
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="card h-100 shadow-sm">
+
+                            <img src="../images/CNC-VMC/Machined-shafts.jpeg" class="card-img-top"
+                                style="height:200px; object-fit:cover;" alt="Machined Components">
+
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Machined Components</h5>
+
+                                <p class="card-text">
+                                    Machined components are produced using precision CNC and conventional
+                                    machines to achieve high accuracy, tight tolerances, and superior surface finish.
+                                </p>
+
+                                <!-- Machining Capability -->
+                                <div class="mt-2">
+                                    <strong>Machining Capability:</strong>
+                                    <ul class="mb-0 ps-3 small">
+                                        <li>CNC Turning – Up to Ø 300 mm × Length 600 mm</li>
+                                        <li>VMC – 500 × 500 × 400 mm</li>
+                                        <li>Conventional Turning – Up to Ø 600 mm × Length 1000 mm</li>
+                                        <li>Milling – 1000 × 500 × 400 mm</li>
+                                        <li>Drilling – Up to Ø 50 mm</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Optional Bottom Banner (if you want consistency) -->
+                            <div class="card-footer bg-primary text-white text-center py-2">
+                                <small>High Precision • Tight Tolerance • Quality Finish</small>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <!-- Machined Shafts -->
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="card h-60">
+                            <img src="../images/CNC-VMC/Machined-shafts.jpeg" class="card-img-top">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Machined Shafts</h5>
+                                <!-- <p class="card-text flex-grow-1">
+                                    High-precision machined shafts crafted for superior strength, accurate
+                                    tolerances, and smooth surface.
+                                </p> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Precision Machining -->
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="card h-60">
+                            <img src="../images/CNC-VMC/Precision-Machining.jpeg" class="card-img-top">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Precision Machining</h5>
+                                <!-- <p class="card-text flex-grow-1">
+                                    Advanced precision machining services delivering tight tolerances, superior
+                                    surface finish, and exceptional dimensional accuracy.
+                                </p> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Custom Machining -->
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="card h-60">
+                            <img src="../images/CNC-VMC/Custom-machining .jpeg" class="card-img-top">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Customized Machining (As per Drawing)</h5>
+                                <!-- <p class="card-text flex-grow-1">
+                                    Tailor-made machining solutions manufactured exactly to client drawings and
+                                    specifications, ensuring precise dimensions, superior quality.
+                                </p> -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="card h-100">
+                            <img src="../images/CNC-VMC/Tee.jpeg" class="card-img-top">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Tee</h5>
+                                <p class="card-text flex-grow-1">
+                                    Precision machined Tee components designed for industrial piping and mechanical
+                                    assemblies, ensuring accurate dimensions, strong durability, and reliable
+                                    performance in demanding engineering applications.
+                                </p>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- Product -->
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="card h-60">
+                            <img src="../images/CNC-VMC/Tee-Body.jpeg" class="card-img-top">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Tee Body</h5>
+                                <!-- <p class="card-text flex-grow-1">
+                                    High-precision Tee Body components crafted for piping and mechanical systems,
+                                    providing exact dimensions, durability, and reliable performance in critical
+                                    industrial applications.
+                                </p> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product -->
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="card h-60">
+                            <img src="/images/CNC-VMC/Valve-Body.jpeg" class="card-img-top">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Valve Body</h5>
+                                <!-- <p class="card-text flex-grow-1">
+                                    Precision-engineered Valve Body components designed for fluid control systems,
+                                    offering accurate dimensions, robust construction.
+                                </p> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="card h-60">
+                            <img src="/images/CNC-VMC/Blank.jpeg" class="card-img-top">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Blank</h5>
+                                <!-- <p class="card-text flex-grow-1">
+                                    High-quality machined blanks serving as the foundation for custom components,
+                                    ensuring precise dimensions, uniform material integrity.
+                                </p> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="card h-60">
+                            <img src="/images/CNC-VMC/Gear-Blank.jpeg" class="card-img-top">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Gear Blank</h5>
+                                <!-- <p class="card-text flex-grow-1">
+                                    Precision-machined Gear Blanks designed as the base for custom gears,
+                                    providing accurate dimensions, superior material quality.
+                                </p> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="card h-60">
+                            <img src="/images/CNC-VMC/Bonnet.jpeg" class="card-img-top">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Bonnet</h5>
+                                <!-- <p class="card-text flex-grow-1">
+                                    Precision-engineered Bonnet components for valves and industrial assemblies,
+                                    ensuring accurate fit, durability.
+                                </p> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="card h-60">
+                            <img src="/images/CNC-VMC/FNPT-body.jpeg" class="card-img-top">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">FNPT Body</h5>
+                                <!-- <p class="card-text flex-grow-1">
+                                    High-precision FNPT Body components designed for threaded piping systems,
+                                    delivering accurate dimensions, robust construction.
+                                </p> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="card h-60">
+                            <img src="/images/CNC-VMC/Ring-Housing.jpeg" class="card-img-top">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Ring Housing</h5>
+                                <!-- <p class="card-text flex-grow-1">
+                                    Precision-machined Ring Housing components for mechanical assemblies,
+                                    providing exact dimensions, high strength.
+                                </p> -->
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- Capabilities -->
+            <!-- <div class="row mt-5">
+                <div class="col-lg-12">
+                    <div class="bg-white p-4 rounded shadow-sm">
+                        <h4 class="fw-bold mb-3">Machining Capabilities</h4>
+                        <div class="row">
+
+                            <div class="col-md-6">
+                                <ul class="list-unstyled text-muted">
+                                    <li><i class="fa-solid fa-check text-success me-2"></i>CNC Turning</li>
+                                    <li><i class="fa-solid fa-check text-success me-2"></i>VMC Machining</li>
+                                    <li><i class="fa-solid fa-check text-success me-2"></i>Tight Tolerance Components
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="col-md-6">
+                                <ul class="list-unstyled text-muted">
+                                    <li><i class="fa-solid fa-check text-success me-2"></i>Surface Finishing</li>
+                                    <li><i class="fa-solid fa-check text-success me-2"></i>Batch & Prototype Production
+                                    </li>
+                                    <li><i class="fa-solid fa-check text-success me-2"></i>Inspection & Quality Control
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+
+            <!-- Section Heading -->
+            <!-- <h2 class="text-center fw-bold mb-5">Oil and Gas Sector Components</h2> -->
+            <div class="text-center mb-5">
+                <h2 class="fw-bold section-title">Oil and Gas Sector Components</h2>
+            </div>
+            <!-- Products Grid -->
+            <div class="row g-4">
+
+                <!-- Flanges -->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card premium-card h-100">
+                        <img src="../images/oil-gas/Flanges.jpeg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Flanges</h5>
+                            <!-- <p class="card-text">
+                                High-quality forged flanges designed for reliable sealing and
+                                strong connections in pipelines, valves, and pressure vessels
+                                used in Oil & Gas applications.
+                            </p> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- High Pressure Fittings -->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card premium-card h-100">
+                        <img src="../images/oil-gas/High-Pressure Fittings.jpeg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">High-Pressure Fittings</h5>
+                            <!-- <p class="card-text">
+                                Precision-engineered high-pressure fittings designed to handle
+                                extreme operating pressures while ensuring leak-proof and
+                                long-lasting performance.
+                            </p> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Adapters -->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card premium-card h-100">
+                        <img src="../images/oil-gas/Adaptors.png" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Adapters</h5>
+                            <!-- <p class="card-text">
+                                Custom forged and machined adapters manufactured as per
+                                drawings, ensuring precise fitment, pressure integrity, and
+                                compatibility with Oil & Gas systems.
+                            </p> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Extra Product -->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card premium-card h-100">
+                        <img src="/images/CNC-VMC/Tee.jpeg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Tee</h5>
+                            <!-- <p class="card-text">
+                                Precision-forged and machined Tee components designed for Oil & Gas piping systems,
+                                providing accurate dimensions, high pressure integrity, and reliable performance
+                                in critical industrial applications.
+                            </p> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Capabilities -->
+            <div class="row mt-5">
+                <div class="col-lg-12">
+                    <div class="bg-white p-4 rounded shadow-sm">
+                        <h4 class="fw-bold mb-3">Machining Capabilities</h4>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="list-unstyled text-muted">
+                                    <li><i class="fa-solid fa-check text-success me-2"></i>CNC Turning</li>
+                                    <li><i class="fa-solid fa-check text-success me-2"></i>VMC Machining</li>
+                                    <li><i class="fa-solid fa-check text-success me-2"></i>Tight Tolerance Components
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="col-md-6">
+                                <ul class="list-unstyled text-muted">
+                                    <li><i class="fa-solid fa-check text-success me-2"></i>Surface Finishing</li>
+                                    <li><i class="fa-solid fa-check text-success me-2"></i>Batch & Prototype Production
+                                    </li>
+                                    <li><i class="fa-solid fa-check text-success me-2"></i>Inspection & Quality Control
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <footer class="bg-black text-light pt-5">
+        <div class="container">
+
+            <div class="row">
+
+                <!-- About Company -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="../images/logo.png" alt="TechMak Solutions Logo" style="width:150px;height:auto;"
+                            class="me-2">
+                        <!-- <h5 class="fw-bold text-white mb-0">
+                            TechMak Solutions
+                        </h5> -->
+                    </div>
+
+
+                    <p class="text-light">
+                        Delivering high-strength forged & machined components with
+                        world-class quality and reliability serving Oil & Gas,
+                        Heavy Engineering and global industrial sectors.
+                    </p>
+                </div>
+
+
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="fw-bold text-white mb-3">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="../index.html" class="text-light text-decoration-none">Home</a></li>
+                        <li><a href="../about-us.html" class="text-light text-decoration-none">About Us</a></li>
+                        <li><a href="../products/closed-die-forging.html"
+                                class="text-light text-decoration-none">Products</a></li>
+                        <li><a href="../quality.html" class="text-light text-decoration-none">Services</a></li>
+                        <li><a href="../contact.html" class="text-light text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+
+
+
+                <!-- Contact Info -->
+                <!-- Contact Info -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h6 class="fw-bold text-white mb-3">Contact Info</h6>
+
+                    <p class="mb-2">
+                        <i class="fa-solid fa-location-dot me-2"></i>
+                        <strong>Office:</strong><br>
+                        A-729, Brahma Business Park,<br>
+                        New Kalyani Nagar,<br>
+                        Pune – 411014, Maharashtra
+                    </p>
+
+                    <p class="mb-2">
+                        <i class="fa-solid fa-industry me-2"></i>
+                        <strong>Plant:</strong><br>
+                        Gat No. 1297, Sane Chowk, Chikhali,<br>
+                        Pune – 411062, Maharashtra, India
+                    </p>
+                    <p class="mb-2">
+                        <i class="fa-solid fa-envelope me-2"></i>
+                        sales@techmaksolutions.com
+                    </p>
+
+                    <p class="mb-0">
+                        <i class="fa-solid fa-clock me-2"></i>
+                        Mon – Sat : 9:00 AM – 7:00 PM
+                    </p>
+                </div>
+
+                <!-- Why TechMak Solutions -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h6 class="fw-bold text-white mb-3">Why TechMak Solutions</h6>
+
+                    <ul class="list-unstyled text-light">
+
+                        <li class="mb-2">
+                            <i class="fa-solid fa-circle-check text-warning me-2"></i>
+                            Precision Forged Components
+                        </li>
+
+                        <li class="mb-2">
+                            <i class="fa-solid fa-circle-check text-warning me-2"></i>
+                            Advanced Ring Rolling Technology
+                        </li>
+
+                        <li class="mb-2">
+                            <i class="fa-solid fa-circle-check text-warning me-2"></i>
+                            Quality & Reliability Assurance
+                        </li>
+
+                        <li class="mb-2">
+                            <i class="fa-solid fa-circle-check text-warning me-2"></i>
+                            Domestic & Global Supply
+                        </li>
+
+                        <li class="mb-0">
+                            <i class="fa-solid fa-circle-check text-warning me-2"></i>
+                            Industrial Engineering Expertise
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+
+            <hr class="border-light">
+
+            <!-- Footer Bottom -->
+            <div class="row">
+                <div class="col-12 text-center py-3">
+                    © 2026 TechMak Solutions. All Rights Reserved.
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <!-- ================= BOOTSTRAP JS ================= -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Toggle icon change -->
+    <script>
+        document.addEventListener('shown.bs.collapse', function (e) {
+            if (e.target.id === 'topNav') {
+                document.querySelector('#navbarToggler i')
+                    .classList.replace('fa-bars', 'fa-times');
+            }
+        });
+
+        document.addEventListener('hidden.bs.collapse', function (e) {
+            if (e.target.id === 'topNav') {
+                document.querySelector('#navbarToggler i')
+                    .classList.replace('fa-times', 'fa-bars');
+            }
+        });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 900, once: true });
+    </script>
+
+
+</body>
+
+</html>
